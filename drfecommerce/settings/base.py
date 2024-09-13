@@ -3,7 +3,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'django-insecure--e%z(0ydsb_v7f&g8s&x#3ga)v^+3=pcf+)xj)63%rj!7iu1iw'
+SECRET_KEY = 'r$yqo6sv0)9i^pauikd(u8-lf^vs-i7x1*g#o_o3&p*-nq^o0+'
 
 DEBUG = True
 
@@ -53,16 +53,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'drfecommerce.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation

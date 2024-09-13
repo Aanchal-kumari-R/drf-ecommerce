@@ -1,9 +1,13 @@
-from pathlib import Path
+import os
+from pathlib import Path 
+from dotenv import load_dotenv
+
+load_dotenv()  
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'r$yqo6sv0)9i^pauikd(u8-lf^vs-i7x1*g#o_o3&p*-nq^o0+'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 

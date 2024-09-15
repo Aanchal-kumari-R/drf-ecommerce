@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'rest_framework', 
     #Internal apps  
     'drfecommerce.product', 
-    'mptt',
+    'mptt', 
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -100,4 +101,17 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' 
+
+REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}  
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'DRF Ecommerce API',
+    'DESCRIPTION': 'DRF Ecommerce API for Django ninjas',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}

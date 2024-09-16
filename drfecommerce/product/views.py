@@ -27,9 +27,9 @@ class ProductViewSet(viewsets.ViewSet):
     queryset = Product.objects.all()  
     
     @action(
-            url_path=r"category/(?P<category>[^/]+)/all", 
-            detail=False, 
-            methods=['get'] 
+            url_path=r"category/(?P<category>[^/]+)/all",  
+            methods=['get'], 
+             detail=False
     )
     def list_products_by_category(self,request,category=None):  
         serialized = ProductSerializer(self.queryset.filter(category__name=category),many=True) 
